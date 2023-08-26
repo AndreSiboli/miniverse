@@ -21,12 +21,17 @@ export default function Footer() {
                         <div className={styles.social_links}>
                             <h3>Social</h3>
                             <div className={styles.links}>
-                                <Link href="https://github.com/AndreSiboli" target="_blank">
+                                <Link
+                                    href="https://github.com/AndreSiboli"
+                                    target="_blank"
+                                    aria-label="GitHub"
+                                >
                                     <FaGithubSquare />
                                 </Link>
                                 <Link
                                     href="https://www.linkedin.com/in/andr%C3%A9-siboli-81b969244/"
                                     target="_blank"
+                                    aria-label="Linkedin"
                                 >
                                     <FaLinkedin />
                                 </Link>
