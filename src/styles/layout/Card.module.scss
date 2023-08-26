@@ -1,0 +1,65 @@
+@use '@/styles/_dirs/variables';
+
+.card {
+    max-width: 300px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-100px);
+    opacity: 0;
+
+    &:hover {
+        filter: brightness(1.15);
+    }
+
+    &.effect {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+
+    &_link {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            .card_image {
+                transform: translateY(-0.5em);
+                img {
+                    box-shadow: 10px 10px 10px rgba(variables.$pri-color, 0.25);
+                }
+            }
+        }
+    }
+
+    &_image {
+        max-width: 275px;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 1.5em;
+        transition: 0.3s ease-in-out;
+
+        img {
+            aspect-ratio: 1/1;
+            border-radius: 1.5em;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &_title {
+        h3 {
+            font-size: calc(1.1em + 0.4vw);
+            font-weight: 700;
+            color: variables.$pri_color;
+        }
+    }
+
+    &_content {
+        p {
+            font-size: calc(0.9em + 0.1vw);
+            font-size: 1em;
+            color: rgba($color: variables.$pri-color, $alpha: 0.8);
+        }
+    }
+}

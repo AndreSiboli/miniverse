@@ -1,0 +1,72 @@
+@use '@/styles/_dirs/variables';
+
+.update {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px #000a;
+
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    &.effect {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 500px;
+    }
+
+    &_infos {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0 1em 1em 1em;
+    }
+
+    &_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        width: 100%;
+        aspect-ratio: 3/2;
+        position: relative;
+
+        @media screen and (max-width: 668px) {
+            max-width: 500px;
+        }
+
+        &:after {
+            content: '';
+            border: 1px solid variables.$sec-color;
+            width: 80%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 0.5em;
+        }
+    }
+
+    &_title {
+        h3 {
+            font-size: 1.5em;
+        }
+    }
+
+    &_link {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.25em;
+        }
+    }
+}

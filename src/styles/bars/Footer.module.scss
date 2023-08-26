@@ -1,0 +1,95 @@
+@use '@/styles/_dirs/variables';
+
+.footer {
+    width: 100%;
+    background-color: variables.$pri-color;
+    padding: 0 2em;
+
+    &_container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        min-height: 400px;
+        padding: 6em 0;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &_links {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        max-width: 300px;
+        width: 100%;
+
+        h3 {
+            font-size: 1.25em;
+            color: variables.$sec-color;
+        }
+
+        @media screen and (max-width: 400px) {
+            flex-direction: column;
+            gap: 1.5em;
+        }
+    }
+
+    .mention_links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        a {
+            font-size: 0.9em;
+        }
+    }
+
+    .social_links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        .links {
+            display: flex;
+            gap: 1em;
+
+            a {
+                svg {
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+
+    &_site {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    &_logo {
+        display: flex;
+        justify-content: flex-end;
+
+        h1 {
+            font-size: 1.25em;
+            border: 2px solid #fff;
+            border-radius: 1.5em;
+            padding: 0.2em 0.5em;
+            width: fit-content;
+        }
+    }
+
+    &_rights {
+        p {
+            font-size: 0.8em;
+            color: #fff5;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
